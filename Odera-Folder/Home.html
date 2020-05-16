@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="home.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CreativeShare</title>
+    </head>
+    <body>
+        <div class="navbar">
+            <a class="nav-button" href="#FAQ">FAQ</a>
+            <a class="nav-button" href="#Sign In">Log-In</a>
+            <a class="nav-button" href="#Sign In">Sign-Up</a>
+            <a class="nav-button" href="#AboutUs">About Us</a>
+            <a class="nav-button" href="#select-car">Select Car</a>
+            <a class="nav-button" href="#home">Home</a>
+            <div class="navbar-left">
+                <a  class="logo" href="#home"><h1>Creative Share</h1></a>
+            </div>
+        </div>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img  class="slide-image" src="https://www.internet-didactica.es/wp-content/uploads/man-computer-simbyosis.jpg" style="width:100%">
+              <div class="text">Sign-Up Today</div>
+              <div class="text" style="font-size: 30px; margin-top: 100px;">Sign-Up for Creative Share today to connect with content creator nearby and all around. Become a content creator yourself too!</div>
+              <div class="text"><input style="margin-top: 180px" type="e-mail" name="" placeholder="forexample@gmail.com"></div>
+              <div class="text" style="margin-top: 210px;" ><a class="button" href="#sign-up">Sign Up!</a></div>
+            </div>
+
+            
+            <div class="mySlides fade">
+              <img  class="slide-image" src="https://images.unsplash.com/photo-1538370965046-79c0d6907d47?ixlib=rb-1.2.1&w=1000&q=80" style="width:100%">
+              <div class="text">Caption Two</div>
+            </div>
+            
+            <div class="mySlides fade">
+
+              <img class="slide-image" src="img_mountains_wide.jpg" style="width:100%">
+              <div class="text">Caption Three</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+        </script>
+        
+    </body>
+</html>
